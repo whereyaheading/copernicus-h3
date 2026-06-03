@@ -44,7 +44,7 @@ One row per H3 cell, at each published resolution. Schema is identical at every 
 | `pixel_count` | `uint32` | — | Source pixels aggregated into this cell (confidence weight) |
 | `geoid_undulation` | `float32` | metres | EGM2008 geoid height above the WGS84 ellipsoid (see [Vertical datum](#vertical-datum--height-above-ground)) |
 
-- **Elevations are orthometric** (height above the EGM2008 geoid — Copernicus GLO-30's native vertical datum), in metres.
+- **Elevations are [orthometric](https://en.wikipedia.org/wiki/Orthometric_height)** (height above the EGM2008 geoid — Copernicus GLO-30's native vertical datum), in metres.
 - **Horizontal datum is WGS84.** Cell geometry is standard H3.
 - Statistics are computed **independently at each resolution directly from the ~30 m source pixels** (not rolled up from a finer level), so each resolution is internally exact.
 
@@ -117,6 +117,10 @@ Elevations here are **orthometric** (referenced to the EGM2008 geoid). GNSS / AD
 ```
 geoid_undulation = N = h_ellipsoidal − H_orthometric   (negative in CONUS, ~ −15 to −36 m)
 ```
+
+<p align="center"><img src="docs/visuals/geoid_spin.gif" width="380" alt="The EGM2008 geoid spinning, exaggerated"></p>
+
+<p align="center"><em>The EGM2008 geoid, exaggerated ~13,000× — red where it rises above the WGS84 ellipsoid, blue where it dips below (the undulation <code>N</code>, ±~100 m). The <code>geoid_undulation</code> column samples this field per cell.</em></p>
 
 **To compute height above the terrain** from an ellipsoidal-height source:
 
