@@ -1,0 +1,23 @@
+# Core pipeline — build → boundary-merge → geoid → recompress → validate.
+# Pinned to the versions this dataset was built and validated with.
+boto3==1.42.97
+duckdb==1.4.4
+h3ronpy==0.22.0
+numpy==2.0.2
+pyarrow==21.0.0
+pyproj==3.6.1
+rasterio==1.4.3
+scipy==1.13.1
+
+# DuckDB additionally loads the `h3` community extension at runtime
+# (the scripts run `INSTALL h3 FROM community; LOAD h3;` themselves).
+
+# --- Consuming the published dataset ---
+# If you only want to *read* the data and do H3 lookups, you need just:
+#   duckdb  pyarrow  h3>=4.0      (h3 = the official Python H3 bindings)
+
+# --- Dev / analysis extras (not needed to reproduce the dataset) ---
+# Used by docs/band_planner.py and pipeline/validate_elevation.py:
+#   matplotlib
+#   shapely
+#   global-land-mask

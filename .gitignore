@@ -1,0 +1,22 @@
+# Dataset payload — published separately, never commit (~51 GB)
+/data/
+/h3-terrain/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Build scratch / caches
+.tile_cache/
+pipeline/.tile_cache/
+*.tmp
+
+# Local geoid grid (download once; see pipeline/geoid.py)
+us_nga_egm08_25.tif
+
+# macOS
+.DS_Store
+
+# Note: pipeline/tile_manifest.json IS tracked — it's the canonical 26,450-tile
+# source list and is small (~1 MB). manifest.py regenerates it from the public bucket.
