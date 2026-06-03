@@ -6,6 +6,10 @@
 
 For any H3 cell you get the mean/min/max/stddev elevation of the ground inside it, how many source pixels backed that estimate, and the geoid undulation needed to convert to height-above-ground. Available at H3 resolutions **2 through 9** (continent-scale down to ~170 m hexes).
 
+<p align="center"><img src="docs/visuals/aspen_subdivision.gif" alt="H3 resolution subdivision over the Colorado Rockies near Aspen"></p>
+
+<p align="center"><em>The H3 hierarchy in action — a cluster of res-4 cells over the Colorado Rockies subdividing to res 8; each hexagon splits into its 7 children per level. Aspen sits in the green valley near the center; heights are the dataset's <code>elevation_mean</code>.</em></p>
+
 ---
 
 ## Get the data

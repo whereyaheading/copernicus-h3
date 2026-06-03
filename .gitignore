@@ -20,3 +20,7 @@ us_nga_egm08_25.tif
 
 # Note: pipeline/tile_manifest.json IS tracked — it's the canonical 26,450-tile
 # source list and is small (~1 MB). manifest.py regenerates it from the public bucket.
+
+# visual intermediates
+docs/visuals/frames/
+docs/visuals/frames_sub/
