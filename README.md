@@ -10,6 +10,8 @@ For any H3 cell you get the mean/min/max/stddev elevation of the ground inside i
 
 <p align="center"><em>The H3 hierarchy in action — a cluster of res-4 cells over the Colorado Rockies subdividing to res 8; each hexagon splits into its 7 children per level. Aspen sits in the green valley near the center; heights are the dataset's <code>elevation_mean</code>.</em></p>
 
+<p align="center"><a href="https://huggingface.co/spaces/whereyaheading/copernicus-h3-terrain-viewer"><b>▶ Fly around it in 3D — interactive viewer</b></a></p>
+
 ---
 
 ## Get the data
