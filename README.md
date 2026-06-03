@@ -1,5 +1,7 @@
 # Copernicus GLO-30 Terrain — H3-Indexed Global Elevation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20518940.svg)](https://doi.org/10.5281/zenodo.20518940)
+
 **Status: released.** A global terrain-elevation dataset derived from the [Copernicus GLO-30 Digital Elevation Model](https://registry.opendata.aws/copernicus-dem/), re-published as **[H3](https://h3geo.org)-indexed Parquet** so you can get terrain statistics with a hash lookup instead of managing raster tiles.
 
 For any H3 cell you get the mean/min/max/stddev elevation of the ground inside it, how many source pixels backed that estimate, and the geoid undulation needed to convert to height-above-ground. Available at H3 resolutions **2 through 9** (continent-scale down to ~170 m hexes).
@@ -167,7 +169,7 @@ See `DATA_LICENSE.md` for the full Copernicus DEM terms and disclaimer. By downl
 
 If you use this dataset, please cite:
 
-> Haugen, Frances (2026). *Copernicus GLO-30 Terrain, H3-Indexed* (v1) [Data set]. Hugging Face. https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain. Derived from Copernicus DEM GLO-30.
+> Haugen, Frances (2026). *Copernicus GLO-30 Terrain, H3-Indexed* (v1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20518940. Derived from Copernicus DEM GLO-30.
 
 ```bibtex
 @misc{haugen2026copernicush3,
@@ -175,10 +177,11 @@ If you use this dataset, please cite:
   title        = {Copernicus GLO-30 Terrain, H3-Indexed},
   year         = {2026},
   version      = {1.0},
-  publisher    = {Hugging Face},
-  url          = {https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.20518940},
+  url          = {https://doi.org/10.5281/zenodo.20518940},
   note         = {Derived from Copernicus DEM GLO-30}
 }
 ```
 
-Citing this dataset does **not** replace the mandatory Copernicus DEM attribution — see [LICENSE](LICENSE) / [DATA_LICENSE.md](DATA_LICENSE.md).
+The DOI resolves to the archived release; the data itself is on [Hugging Face](https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain) and S3 (see [Get the data](#get-the-data)). Citing this dataset does **not** replace the mandatory Copernicus DEM attribution — see [LICENSE](LICENSE) / [DATA_LICENSE.md](DATA_LICENSE.md).
