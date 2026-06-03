@@ -165,6 +165,20 @@ See `DATA_LICENSE.md` for the full Copernicus DEM terms and disclaimer. By downl
 
 ## Citation
 
-> Copernicus GLO-30 Terrain, H3-Indexed. Derived from Copernicus DEM GLO-30. https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain
+If you use this dataset, please cite:
 
-Also mirrored at `s3://copernicus-glo30-h3-terrain` (us-east-1, requester-pays).
+> Haugen, Frances (2026). *Copernicus GLO-30 Terrain, H3-Indexed* (v1) [Data set]. Hugging Face. https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain. Derived from Copernicus DEM GLO-30.
+
+```bibtex
+@misc{haugen2026copernicush3,
+  author       = {Haugen, Frances},
+  title        = {Copernicus GLO-30 Terrain, H3-Indexed},
+  year         = {2026},
+  version      = {1.0},
+  publisher    = {Hugging Face},
+  url          = {https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain},
+  note         = {Derived from Copernicus DEM GLO-30}
+}
+```
+
+Citing this dataset does **not** replace the mandatory Copernicus DEM attribution — see [LICENSE](LICENSE) / [DATA_LICENSE.md](DATA_LICENSE.md).
