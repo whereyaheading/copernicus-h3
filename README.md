@@ -1,6 +1,6 @@
 # Copernicus GLO-30 Terrain — H3-Indexed Global Elevation
 
-**Status: draft.** A global terrain-elevation dataset derived from the [Copernicus GLO-30 Digital Elevation Model](https://registry.opendata.aws/copernicus-dem/), re-published as **[H3](https://h3geo.org)-indexed Parquet** so you can get terrain statistics with a hash lookup instead of managing raster tiles.
+**Status: released.** A global terrain-elevation dataset derived from the [Copernicus GLO-30 Digital Elevation Model](https://registry.opendata.aws/copernicus-dem/), re-published as **[H3](https://h3geo.org)-indexed Parquet** so you can get terrain statistics with a hash lookup instead of managing raster tiles.
 
 For any H3 cell you get the mean/min/max/stddev elevation of the ground inside it, how many source pixels backed that estimate, and the geoid undulation needed to convert to height-above-ground. Available at H3 resolutions **2 through 9** (continent-scale down to ~170 m hexes).
 
@@ -8,7 +8,7 @@ For any H3 cell you get the mean/min/max/stddev elevation of the ground inside i
 
 ## Get the data
 
-Hosted in two places — use whichever fits:
+The data is hosted in two places — use whichever fits:
 
 - **Hugging Face** — browse and query in place: **[`whereyaheading/copernicus-glo30-h3-terrain`](https://huggingface.co/datasets/whereyaheading/copernicus-glo30-h3-terrain)**. Read directly with DuckDB over `hf://…`, or `snapshot_download(...)` the whole thing (see [Quick start](#quick-start)).
 - **AWS S3** — `s3://copernicus-glo30-h3-terrain` (us-east-1), **public but requester-pays** (you pay egress, so it needs AWS credentials and `--request-payer requester`):
@@ -17,6 +17,8 @@ Hosted in two places — use whichever fits:
   ```
 
 ~23 GB total, 228 Parquet files. See [How it's organized](#how-its-organized) for the layout.
+
+**Source code & build pipeline:** [github.com/whereyaheading/copernicus-h3](https://github.com/whereyaheading/copernicus-h3).
 
 ---
 
